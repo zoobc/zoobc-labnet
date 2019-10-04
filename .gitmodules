@@ -1,0 +1,4 @@
+[submodule "zoobc-core"]
+	path = zoobc-core
+	url = git@github.com:heri16/zoobc-core.git
+	branch = 253-cross-compile

@@ -1,0 +1,43 @@
+# Tested with: balena build --deviceType raspberrypi3 --arch armv7hf --logs
+# Uses: https://github.com/richfelker/musl-cross-make
+
+#FROM alpine:3.10 as builder
+#RUN apk add --no-cache make musl-dev ca-certificates go=1.12.8-r0
+#RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
+#ENV GOROOT /usr/lib/go
+#ENV GOPATH /go
+#ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+#RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
+
+FROM golang:1.12-alpine as builder
+RUN apk add --no-cache git build-base
+ADD https://api.github.com/repos/richfelker/musl-cross-make/git/refs/tags/v /tmp/musl-versions.json
+RUN latestTag=$(git ls-remote --tags --sort="v:refname" https://github.com/richfelker/musl-cross-make.git | tail -n1 | sed 's/.*\///; s/\^{}//') \
+  && echo "Downloading $latestTag" \
+  && git clone https://github.com/richfelker/musl-cross-make.git --branch "$latestTag" --depth 1 /musl-cross-make
+RUN cd /musl-cross-make \
+  && echo 'TARGET = arm-linux-musleabihf' >> config.mak \
+  && echo 'OUTPUT = /usr/local' >> config.mak \
+  && make \
+  && make install
+RUN go get -u -v github.com/golang/dep/cmd/dep
+RUN go get -u -d -v github.com/improbable-eng/grpc-web/go/grpcwebproxy
+WORKDIR /go/src/github.com/improbable-eng/grpc-web/go/grpcwebproxy
+RUN /go/bin/dep ensure -v
+RUN CC=arm-linux-musleabihf-gcc CXX=arm-linux-musleabihf-g++ CGO_ENABLED=1 GOOS=linux GOARCH=arm GOARM=7 go install -v -x -tags 'netgo' -ldflags '-linkmode external -extldflags "-static"'
+#RUN CC=arm-linux-musleabihf-gcc CXX=arm-linux-musleabihf-g++ CGO_ENABLED=1 GOOS=linux GOARCH=arm GOARM=7 go install -v -tags 'netgo'
+
+
+### Static build requires no runtime:
+FROM arm32v7/busybox:musl
+#FROM scratch
+#ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+### Non-static build requires the alpine musl runtime:
+#FROM balenalib/%%RESIN_MACHINE_NAME%%-alpine:run
+#RUN [ "cross-build-start" ]
+#RUN install_packages sqlite-libs
+#RUN [ "cross-build-end" ]
+COPY --from=builder /etc/nsswitch.conf /etc/nsswitch.conf
+COPY --from=builder /etc/ssl/certs/ /etc/ssl/certs
+COPY --from=builder /go/bin/linux_arm/grpcwebproxy /bin/grpcwebproxy
+CMD ["/bin/grpcwebproxy", "--backend_addr=localhost:7000", "--run_tls_server=false", "--allow_all_origins", "--server_http_debug_port=7001", "--server_http_max_write_timeout=1h"]

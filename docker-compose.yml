@@ -1,0 +1,21 @@
+version: '2'
+volumes:
+    persist-data:
+services:
+    shell:
+        build: ./alpine-openssh
+        network_mode: 'host'
+        volumes:
+            - 'persist-data:/data'
+        labels:
+            io.balena.features.supervisor-api: '1'
+    main:
+        build: ./zoobc-core
+        network_mode: 'host'
+        volumes:
+            - 'persist-data:/data'
+        labels:
+            io.balena.features.supervisor-api: '1'
+    grcpweb:
+        build: ./grpcwebproxy
+        network_mode: 'host'

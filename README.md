@@ -59,8 +59,10 @@ balena deploy zbcDev --build --logs
 ```
 
 ```sh
-# Build without deploy (WARNING: only builds for raspberrypi)
+# Build without deploy (for raspberrypi3)
 balena build --deviceType raspberrypi3 --arch armv7hf --logs
+# Build without deploy (for intel)
+balena build --deviceType intel-nuc --arch amd64 --logs
 # More architectures here: https://www.balena.io/docs/reference/base-images/devicetypes/
 ```
 

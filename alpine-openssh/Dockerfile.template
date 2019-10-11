@@ -3,8 +3,7 @@ RUN [ "cross-build-start" ]
 RUN install_packages openssh bash shadow rsync
 RUN passwd -d root && usermod --shell /bin/bash root && usermod -U root
 RUN echo ". <(xargs -0 bash -c 'printf \"export %q\n\" \"\$@\"' -- < /proc/1/environ)" >> /root/.profile
-COPY restart /usr/local/bin/restart
-COPY purge /usr/local/bin/purge
+COPY bin/* /usr/local/bin/
 RUN chmod +x /usr/local/bin/*
 RUN [ "cross-build-end" ]
 COPY entry.sh /usr/bin/entry.sh

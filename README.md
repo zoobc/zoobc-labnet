@@ -58,9 +58,9 @@ git submodule update --init --remote
 balena deploy zbcDev --build --logs
 ```
 
-- Build without deploy (WARNING: only builds for raspberrypi)
-- - More here: https://www.balena.io/docs/reference/base-images/devicetypes/
 ```sh
+# Build without deploy (WARNING: only builds for raspberrypi)
 balena build --deviceType raspberrypi3 --arch armv7hf --logs
+# More architectures here: https://www.balena.io/docs/reference/base-images/devicetypes/
 ```
 

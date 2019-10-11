@@ -32,4 +32,25 @@ docker version
 export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"
 balena login # Choose Credentials (raspi@blockchainzoo.org:login123)
 balena apps
+balena devices
+```
+
+### Test mDNS (dns-sd/bonjour/avahi) ###
+- MacOS: dns-sd is preinstalled
+- Ubuntu: avahi-daemon is preinstalled
+- Windows 10: mDNS is supported out of the box
+- Older Windows versions: Download and install https://support.apple.com/kb/DL999
+
+```sh
+dns-sd -G v4 cce2597.local
+avahi-resolve-host-name cce2597.local
+nslookup cce2597.local
+```
+
+### Build & Deploy ###
+```sh
+git submodule update --init --remote
+# OR...
+# ln -sf $GOPATH/src/github.com/zoobc/zoobc-core
+balena deploy zbcDev --build --logs
 ```

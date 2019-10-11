@@ -52,5 +52,15 @@ nslookup cce2597.local
 git submodule update --init --remote
 # OR...
 # ln -sf $GOPATH/src/github.com/zoobc/zoobc-core
+```
+
+```sh
 balena deploy zbcDev --build --logs
 ```
+
+- Build without deploy (WARNING: only builds for raspberrypi)
+- - More here: https://www.balena.io/docs/reference/base-images/devicetypes/
+```sh
+balena build --deviceType raspberrypi3 --arch armv7hf --logs
+```
+

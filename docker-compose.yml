@@ -16,6 +16,13 @@ services:
             - 'persist-data:/data'
         labels:
             io.balena.features.supervisor-api: '1'
+    n2:
+        build: ./zoobc-core
+        network_mode: 'host'
+        volumes:
+            - 'persist-data:/data'
+        labels:
+            io.balena.features.supervisor-api: '1'
     grcpweb_main:
         build: ./grpcwebproxy
         network_mode: 'host'

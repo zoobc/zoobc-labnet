@@ -1,26 +1,26 @@
 version: '2'
 volumes:
-    persist-data:
+    resin-data:
 services:
     shell:
         build: ./alpine-openssh
         network_mode: 'host'
         volumes:
-            - 'persist-data:/data'
+            - 'resin-data:/data'
         labels:
             io.balena.features.supervisor-api: '1'
     main:
         build: ./zoobc-core
         network_mode: 'host'
         volumes:
-            - 'persist-data:/data'
+            - 'resin-data:/data'
         labels:
             io.balena.features.supervisor-api: '1'
     n2:
         build: ./zoobc-core
         network_mode: 'host'
         volumes:
-            - 'persist-data:/data'
+            - 'resin-data:/data'
         labels:
             io.balena.features.supervisor-api: '1'
     grcpweb:

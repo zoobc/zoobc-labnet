@@ -23,7 +23,7 @@ services:
             - 'persist-data:/data'
         labels:
             io.balena.features.supervisor-api: '1'
-    grcpweb_main:
+    grcpweb:
         build: ./grpcwebproxy
         network_mode: 'host'
         depends_on:

@@ -8,7 +8,7 @@ const balena = require('balena-sdk')({
 
 const APP_NAME = 'zbcDev';
 const SERVICE_NAME = 'main';
-const FILE_NAME = process.argv[2] || '../zoobc-core/resource/cluster_config.json';
+const FILE_NAME = process.argv[2] || '../zoobc-core/resource_cluster/cluster_config.json';
 
 fs.readFile(FILE_NAME, (err, data) => {
     if (err) throw err;

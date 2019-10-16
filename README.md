@@ -61,8 +61,8 @@ Configure balena-cli to point towards the local openBalena instance (instead of 
 
 ```sh
 wget -O ~/balena-ca.crt https://raw.githubusercontent.com/zoobc/zoobc-labnet/master/balena-ca.crt
-echo >> ~/.bashrc
-echo 'export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bashrc
+echo -e '\nexport NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bash_profile
+echo -e '\nexport NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bashrc
 echo 'balenaUrl: "raspi.zoobc.org"' > ~/.balenarc.yml
 ```
 

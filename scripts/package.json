@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "balena-sdk": "^12.15.1"
+    "balena-sdk": "^12.15.1",
+    "p-limit": "^2.2.1"
   }
 }

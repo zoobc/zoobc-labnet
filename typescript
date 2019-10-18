@@ -1,0 +1,415 @@
+Script started on 2019-10-17 10:14:44+08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="206" LINES="22"]
+
+[00;32m                . ...     .                OS:[00m ArchBang x86_64
+[00;32m            ..NMMMMMMMMMMMM                Hostname:[00m hypervisor
+[00;32m         . 8MMMMMMM.  . .MMMMM             Kernel:[00m 5.3.5-arch1-1-ARCH
+[00;32m        .8MMMMMMMMMMMN.  .. MMMM           Uptime:[00m 2:01
+[00;32m       OMMMMMMMMMMMMMMMM    . .MMM         Window Manager:[00m 
+[00;32m     .=MMMMMMMMMMMMMMMMMM .     MMM.       Packages:[00m 1760
+[00;32m     ?MMMMMMN.  .    . MMM      .MMM.      RAM:[00m 2480 / 15910 MB
+[00;32m    8MMMMMM.  MM         NM      .MMM      CPU:[00m Intel(R) Core(TM) i7-3630QM CPU 
+[00;32m    MMMMMM  .MMM.   .,=. .M:      .MM .    Shell:[00m bash
+[00;32m  .:MMMMM:  MMMM    MMMZ   M       MMM.    Root:[00m 52G / 69G (btrfs)
+[00;32m   ,MMMMM . MMM      MM.   .       .MM.    
+[00;32m    .NMMMMMMMMMMMMM..        .MM     
+[00;32m   ~MMMMMM MMMM..+, MMMMMM.         MM     
+[00;32m   7MMMMMM.MMMMMMMMM8MMMM M:       MMM.    
+[00;32m    MMMMMMM.MM MMMMMMMMMM. M$     .MM,.    
+[00;32m    7MMMMMMMMMMM.  MMMMM    MM.   MMM      
+[00;32m     MMMMMMMMMM8.   +MMO     M  .,MM       
+[00;32m     ,MMMMMMMMMMMMM ..         .+MM        
+[00;32m      .NMMMMMMMMMMMMMMMMM,.   .MMM.        
+[00;32m        MMMMMMMMMMMMMMMMMMMMMMMMM .        
+[00;32m         ..MMMMMMMMMMMMMMMMMMMN            
+[00;32m          . .NMMMMMMMMMMMMMM..             
+[00;32m                 .  ,  .                   
+[00m
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet[demo@hypervisor zoobc-labnet]$ ls
+[0m[01;34malpine-openssh[0m/  balena-ca.crt  docker-compose.yml  [01;34mgrpcwebproxy[0m/  README.md  [01;34mscripts[0m/  typescript  [01;34mzoobc-core[0m/
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet[demo@hypervisor zoobc-labnet]$ cd scripts/
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ noe[Kde index.js 
+Service Name: main
+(node:271231) UnhandledPromiseRejectionWarning: FetchError: network timeout at: https://api.raspi.zoobc.org/v5/device_service_environment_variable
+    at Timeout._onTimeout (/home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts/node_modules/node-fetch/index.js:126:13)
+    at ontimeout (timers.js:424:11)
+    at tryOnTimeout (timers.js:288:5)
+    at listOnTimeout (timers.js:251:5)
+    at Timer.processTimers (timers.js:211:10)
+(node:271231) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:271231) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ node index.js 
+Service Name: main
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ node index.js 
+Service Name: main
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ node index.js 
+Service Name: main
+----- Device UUID: ae1c71f -----
+[id: 007] OWNER_ACCOUNT_ADDRESS=BCZnSfqpP5tqFQlMTYkDeBVFWnbyVK7vLr5ORFpTjgtN
+[id: 001] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 002] NODE_PUBLIC_KEY=AA4G2qo2PDICQoJ34ut+ywUMmMKqkis/4GV/8T6Yu/8=
+[id: 551] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 003] NODE_SEED=demanding unlined hazard neuter condone anime asleep ascent capitol sitter marathon armband
+[id: 557] NODE_ADDRESS=0.0.0.0
+[id: 005] SMITHING=true
+----- Device UUID: 55c9ae6 -----
+[id: 558] NODE_ADDRESS=0.0.0.0
+[id: 008] OWNER_ACCOUNT_ADDRESS=BCZKLvgUYZ1KKx-jtF9KoJskjVPvB9jpIjfzzI6zDW0J
+[id: 018] NODE_PUBLIC_KEY=jHMjM58W6sAmaGAYUEZW03tINN1heTuXnlqnEW79ep4=
+[id: 004] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 580] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 014] NODE_SEED=street roast immovable escalator stinger nervy provider debug flavoring hubcap creature remix
+[id: 006] SMITHING=true
+----- Device UUID: 3472130 -----
+[id: 016] SMITHING=true
+[id: 011] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 009] OWNER_ACCOUNT_ADDRESS=OnEYzI-EMV6UTfoUEzpQUjkSlnqB82-SyRN7469lJTWH
+[id: 012] NODE_SEED=spree uplifted stapling quotable disfigure lair deduct untying timothy maggot cryptic unrigged
+[id: 567] NODE_ADDRESS=0.0.0.0
+[id: 561] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 022] NODE_PUBLIC_KEY=Keu41kYXmVloKfr4MwdFWeq1ZKMtRZhGNMmTRgbyNNw=
+----- Device UUID: cce2597 -----
+[id: 025] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 576] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 571] NODE_ADDRESS=0.0.0.0
+[id: 023] NODE_PUBLIC_KEY=WyTkRmVeuva6BE6OraK7rcpR81yNeJTcKaDQXq6mPs8=
+[id: 020] SMITHING=true
+[id: 021] OWNER_ACCOUNT_ADDRESS=iSJt3H8wFOzlWKsy_UoEWF_OjF6oymHMqthyUMDKSyxb
+[id: 013] NODE_SEED=merge plug donor drop cancel inherit extra toss cabbage awkward destroy rail
+----- Device UUID: 1458d84 -----
+[id: 010] NODE_PUBLIC_KEY=eBhouw5/ZVq73apo2kcRO9AEUa681cgPTuXhBwZN+/I=
+[id: 024] OWNER_ACCOUNT_ADDRESS=Zqnn7dDK-GOikw23Yu2M_x1WXg0mF-oKg2GCVp8ui8-d
+[id: 015] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 017] NODE_SEED=helmet eagle wire observe busy find kidney car ignore insect feature mother
+[id: 577] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 575] NODE_ADDRESS=0.0.0.0
+[id: 019] SMITHING=true
+----- Device UUID: b14cce4 -----
+[id: 879] SMITHING=true
+[id: 716] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 878] OWNER_ACCOUNT_ADDRESS=bPeVP71yktQ-z3LdmcbSCgo4hniS1Ce2vnfUWJYUz10d
+[id: 877] NODE_SEED=sponsor swallow family merry economy picnic life tilt large faith loop space
+[id: 860] NODE_ADDRESS=0.0.0.0
+[id: 863] NODE_PUBLIC_KEY=zyPuBPsyZcC6McEEkyYqP6fo6Tk4Z8uzgtkYqFxgWY0=
+----- Device UUID: 190a080 -----
+[id: 873] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 874] NODE_PUBLIC_KEY=NFrz0iuLNBUqET1Srn9ltbji97ZH6shfifukq0PsMw4=
+[id: 865] NODE_ADDRESS=0.0.0.0
+[id: 866] OWNER_ACCOUNT_ADDRESS=X5pwspLGcO_OqqLfw-333MsANJak0r22XtXjd4Tzb1eW
+[id: 957] NODE_SEED=thing brother inside recycle thrive solid eye pen shine payment judge figure
+[id: 867] SMITHING=true
+----- Device UUID: 0ab8085 -----
+[id: 869] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 870] NODE_PUBLIC_KEY=HvzASZymQxmDwrAS9jFkXZ/VBr6LGAF12JSLu9kkkFc=
+[id: 945] NODE_ADDRESS=0.0.0.0
+[id: 875] SMITHING=true
+[id: 961] NODE_SEED=oblige top chase minimum wealth convince edge drop mention law scare wolf
+[id: 935] OWNER_ACCOUNT_ADDRESS=7wYkvs28OUJfxjs2CRkVRp5weomQ5N5yVqeeT4r57z1c
+----- Device UUID: 4b2a8eb -----
+[id: 952] NODE_ADDRESS=0.0.0.0
+[id: 871] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 872] NODE_PUBLIC_KEY=kEphWl658XUSIfKAYoKxLiOwqPCjuh1GTG8JolKQd20=
+[id: 876] NODE_SEED=fence lava develop city chat develop bitter tray cliff quality notice diamond
+[id: 950] SMITHING=true
+[id: 953] OWNER_ACCOUNT_ADDRESS=96DnrjiDThT39CcwRlh0LeJ5Z69MT_jLc8j_genPvEcP
+----- Device UUID: f4946a2 -----
+[id: 951] NODE_PUBLIC_KEY=PuZmsGwSyT+ekOXj8x6FQrAdEMaC392iMyU3bOB7NAQ=
+[id: 958] SMITHING=true
+[id: 954] NODE_SEED=glue dress burger smooth math undo shuffle coast minor vacant pencil occur
+[id: 960] OWNER_ACCOUNT_ADDRESS=O21DDc1O9-RqoVfyxHghDoCHo3lCwyiq_z_XwfJ5DUE2
+[id: 962] NODE_ADDRESS=0.0.0.0
+[id: 963] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+----- Device UUID: 9545a35 -----
+[id: 966] NODE_ADDRESS=0.0.0.0
+[id: 970] SMITHING=true
+[id: 974] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 975] NODE_SEED=air brave retire tape civil gravity coyote nation body tumble shiver enlist
+[id: 965] NODE_PUBLIC_KEY=+/2Ru/fYpmdQF/r6d9xqRvSUQvbCSTJP2JnN0b7Ual8=
+[id: 967] OWNER_ACCOUNT_ADDRESS=gxAGXc5F8L4fXDYE-dW2foaIw3qeHqpqbsNDL0wSWiwQ
+----- Device UUID: 946cd83 -----
+[id: 976] SMITHING=true
+[id: 968] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 969] NODE_SEED=resemble twin shaft post scan boil goddess later vapor century boring spider
+[id: 972] OWNER_ACCOUNT_ADDRESS=D0dZA0Hctx190oSyFVjowC8OUq1LXMYnbwTQ5Vdc1a5r
+[id: 971] NODE_PUBLIC_KEY=AJ1h+g4ImjmqLA1g8Vd/h2iZ6257cQsooaJU6+RKO30=
+[id: 973] NODE_ADDRESS=0.0.0.0
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ [K[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ node index.js [K[demo@hypervisor scripts]$ node index.js [K[demo@hypervisor scripts]$ node index.js [K[demo@hypervisor scripts]$ node index.js [K[demo@hypervisor scripts]$ node index.js [K[demo@hypervisor scripts]$ node index.js [K[demo@hypervisor scripts]$ node index.js 
+Service Name: main
+----- Device UUID: ae1c71f -----
+[id: 001] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 002] NODE_PUBLIC_KEY=AA4G2qo2PDICQoJ34ut+ywUMmMKqkis/4GV/8T6Yu/8=
+[id: 007] OWNER_ACCOUNT_ADDRESS=BCZnSfqpP5tqFQlMTYkDeBVFWnbyVK7vLr5ORFpTjgtN
+[id: 557] NODE_ADDRESS=0.0.0.0
+[id: 003] NODE_SEED=demanding unlined hazard neuter condone anime asleep ascent capitol sitter marathon armband
+[id: 005] SMITHING=true
+[id: 551] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+----- Device UUID: 55c9ae6 -----
+[id: 004] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 018] NODE_PUBLIC_KEY=jHMjM58W6sAmaGAYUEZW03tINN1heTuXnlqnEW79ep4=
+[id: 558] NODE_ADDRESS=0.0.0.0
+[id: 008] OWNER_ACCOUNT_ADDRESS=BCZKLvgUYZ1KKx-jtF9KoJskjVPvB9jpIjfzzI6zDW0J
+[id: 580] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 014] NODE_SEED=street roast immovable escalator stinger nervy provider debug flavoring hubcap creature remix
+[id: 006] SMITHING=true
+----- Device UUID: 3472130 -----
+[id: 009] OWNER_ACCOUNT_ADDRESS=OnEYzI-EMV6UTfoUEzpQUjkSlnqB82-SyRN7469lJTWH
+[id: 016] SMITHING=true
+[id: 011] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 012] NODE_SEED=spree uplifted stapling quotable disfigure lair deduct untying timothy maggot cryptic unrigged
+[id: 567] NODE_ADDRESS=0.0.0.0
+[id: 561] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 022] NODE_PUBLIC_KEY=Keu41kYXmVloKfr4MwdFWeq1ZKMtRZhGNMmTRgbyNNw=
+----- Device UUID: cce2597 -----
+[id: 025] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 571] NODE_ADDRESS=0.0.0.0
+[id: 576] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 023] NODE_PUBLIC_KEY=WyTkRmVeuva6BE6OraK7rcpR81yNeJTcKaDQXq6mPs8=
+[id: 020] SMITHING=true
+[id: 021] OWNER_ACCOUNT_ADDRESS=iSJt3H8wFOzlWKsy_UoEWF_OjF6oymHMqthyUMDKSyxb
+[id: 013] NODE_SEED=merge plug donor drop cancel inherit extra toss cabbage awkward destroy rail
+----- Device UUID: 1458d84 -----
+[id: 010] NODE_PUBLIC_KEY=eBhouw5/ZVq73apo2kcRO9AEUa681cgPTuXhBwZN+/I=
+[id: 015] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 024] OWNER_ACCOUNT_ADDRESS=Zqnn7dDK-GOikw23Yu2M_x1WXg0mF-oKg2GCVp8ui8-d
+[id: 017] NODE_SEED=helmet eagle wire observe busy find kidney car ignore insect feature mother
+[id: 577] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 019] SMITHING=true
+[id: 575] NODE_ADDRESS=0.0.0.0
+----- Device UUID: b14cce4 -----
+[id: 879] SMITHING=true
+[id: 716] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 878] OWNER_ACCOUNT_ADDRESS=bPeVP71yktQ-z3LdmcbSCgo4hniS1Ce2vnfUWJYUz10d
+[id: 877] NODE_SEED=sponsor swallow family merry economy picnic life tilt large faith loop space
+[id: 860] NODE_ADDRESS=0.0.0.0
+[id: 863] NODE_PUBLIC_KEY=zyPuBPsyZcC6McEEkyYqP6fo6Tk4Z8uzgtkYqFxgWY0=
+----- Device UUID: 190a080 -----
+[id: 873] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 874] NODE_PUBLIC_KEY=NFrz0iuLNBUqET1Srn9ltbji97ZH6shfifukq0PsMw4=
+[id: 865] NODE_ADDRESS=0.0.0.0
+[id: 866] OWNER_ACCOUNT_ADDRESS=X5pwspLGcO_OqqLfw-333MsANJak0r22XtXjd4Tzb1eW
+[id: 867] SMITHING=true
+[id: 957] NODE_SEED=thing brother inside recycle thrive solid eye pen shine payment judge figure
+----- Device UUID: 0ab8085 -----
+[id: 869] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 870] NODE_PUBLIC_KEY=HvzASZymQxmDwrAS9jFkXZ/VBr6LGAF12JSLu9kkkFc=
+[id: 945] NODE_ADDRESS=0.0.0.0
+[id: 875] SMITHING=true
+[id: 961] NODE_SEED=oblige top chase minimum wealth convince edge drop mention law scare wolf
+[id: 935] OWNER_ACCOUNT_ADDRESS=7wYkvs28OUJfxjs2CRkVRp5weomQ5N5yVqeeT4r57z1c
+----- Device UUID: 4b2a8eb -----
+[id: 952] NODE_ADDRESS=0.0.0.0
+[id: 871] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 872] NODE_PUBLIC_KEY=kEphWl658XUSIfKAYoKxLiOwqPCjuh1GTG8JolKQd20=
+[id: 876] NODE_SEED=fence lava develop city chat develop bitter tray cliff quality notice diamond
+[id: 950] SMITHING=true
+[id: 953] OWNER_ACCOUNT_ADDRESS=96DnrjiDThT39CcwRlh0LeJ5Z69MT_jLc8j_genPvEcP
+----- Device UUID: f4946a2 -----
+[id: 951] NODE_PUBLIC_KEY=PuZmsGwSyT+ekOXj8x6FQrAdEMaC392iMyU3bOB7NAQ=
+[id: 958] SMITHING=true
+[id: 954] NODE_SEED=glue dress burger smooth math undo shuffle coast minor vacant pencil occur
+[id: 960] OWNER_ACCOUNT_ADDRESS=O21DDc1O9-RqoVfyxHghDoCHo3lCwyiq_z_XwfJ5DUE2
+[id: 962] NODE_ADDRESS=0.0.0.0
+[id: 963] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+----- Device UUID: 9545a35 -----
+[id: 970] SMITHING=true
+[id: 966] NODE_ADDRESS=0.0.0.0
+[id: 974] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 975] NODE_SEED=air brave retire tape civil gravity coyote nation body tumble shiver enlist
+[id: 965] NODE_PUBLIC_KEY=+/2Ru/fYpmdQF/r6d9xqRvSUQvbCSTJP2JnN0b7Ual8=
+[id: 967] OWNER_ACCOUNT_ADDRESS=gxAGXc5F8L4fXDYE-dW2foaIw3qeHqpqbsNDL0wSWiwQ
+----- Device UUID: 946cd83 -----
+[id: 968] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 976] SMITHING=true
+[id: 969] NODE_SEED=resemble twin shaft post scan boil goddess later vapor century boring spider
+[id: 971] NODE_PUBLIC_KEY=AJ1h+g4ImjmqLA1g8Vd/h2iZ6257cQsooaJU6+RKO30=
+[id: 972] OWNER_ACCOUNT_ADDRESS=D0dZA0Hctx190oSyFVjowC8OUq1LXMYnbwTQ5Vdc1a5r
+[id: 973] NODE_ADDRESS=0.0.0.0
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ ls
+index.js  [0m[01;34mnode_modules[0m/  package.json  package-lock.json
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ geany inte[K[Kdex.js 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ ls 
+index.js  [0m[01;34mnode_modules[0m/  package.json  package-lock.json
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ ls ^[[B[K[K[K[K[K[Kgeany index.js ls[Kgeany index.js 
+Gdk-[1;32mMessage[0m: [34m11:37:14.808[0m: Window 0x564909a2a0b0 is a temporary window without parent, application will not be able to position it on screen.
+Gdk-[1;32mMessage[0m: [34m11:37:14.808[0m: Window 0x564909a2a0b0 is a temporary window without parent, application will not be able to position it on screen.
+
+(geany:425378): Gdk-[1;35mCRITICAL[0m **: [34m11:37:14.846[0m: gdk_wayland_window_handle_configure_popup: assertion 'impl->transient_for' failed
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ geany index.js [Kls [K[K[Kgeany index.js [1P[1P[1P[1P[1P[1@c[1@a[1@t
+'use strict';
+
+const fs = require('fs');
+
+const balena = require('balena-sdk')({
+    apiUrl: "https://api.raspi.zoobc.org",
+});
+
+const APP_NAME = 'zbcDev';
+const SERVICE_NAME = 'main';
+const FILE_NAME = process.argv[2] || '../zoobc-core/resource_cluster/cluster_config.json';
+
+fs.readFile(FILE_NAME, (err, data) => {
+    if (err) throw err;
+    const configArr = JSON.parse(data);
+
+    balena.models.device.getAllByApplication(APP_NAME).then(function(devices) {
+        balena.models.service.getAllByApplication(APP_NAME).then(function(services) {
+            // console.debug(services.map(s => ({service_name: s.service_name, id: s.id })));
+            const [service] = services.filter(s => s.service_name === SERVICE_NAME);
+            console.info(`Service Name: ${service.service_name}`);
+
+            const setDevicePromises = devices.sort((a, b) => a.id - b.id).map((device, idx) => {
+                const config = configArr[idx];
+                if (!config) return;
+
+                const setVarPromises = Object.entries(config).map(([key, value]) =>
+                    balena.models.device.serviceVar.set(device.uuid, service.id, key, value)
+                );
+
+                return Promise.all(setVarPromises).then(() =>
+                    balena.models.device.serviceVar.getAllByDevice(device.uuid)
+                ).then((vars) =>
+                    Object.assign({}, device, { serviceVars: vars })
+                );
+            });
+
+            Promise.all(setDevicePromises).then(function(devices) {
+                devices.filter(d => !!d).forEach((device) => {
+                    console.info(`----- Device UUID: ${device.uuid.substr(0, 7)} -----`);
+                    // console.debug(device);
+                    device.serviceVars.forEach((sVar) => {
+                        console.info(`[id: ${('000' + sVar.id).substr(-3)}] ${sVar.name}=${sVar.value}`);
+                    });
+                });
+                // balena.models.device.serviceVar.getAllByApplication(APP_NAME).then(function(vars) {
+                //     console.debug(vars.map(v => ({ id: v.id, name: v.name, value: v.value })));
+                // });
+            });
+        });
+    });
+});
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ ls ../zoobc-core/resource_cluster/cluster_config.json
+../zoobc-core/resource_cluster/cluster_config.json
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ [K[demo@hypervisor scripts]$ [K[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ 
+]0;demo@hypervisor: /home/demo/go/src/github.com/zoobc/zoobc-labnet/scripts[demo@hypervisor scripts]$ ls ../zoobc-core/resource_cluster/cluster_config.json[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat index.js [K[1P[1P[1P[1@n[1@o[1@d[1@e
+Service Name: main
+----- Device UUID: ae1c71f -----
+[id: 001] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 003] NODE_SEED=demanding unlined hazard neuter condone anime asleep ascent capitol sitter marathon armband
+[id: 557] NODE_ADDRESS=0.0.0.0
+[id: 007] OWNER_ACCOUNT_ADDRESS=BCZnSfqpP5tqFQlMTYkDeBVFWnbyVK7vLr5ORFpTjgtN
+[id: 551] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 005] SMITHING=true
+[id: 002] NODE_PUBLIC_KEY=AA4G2qo2PDICQoJ34ut+ywUMmMKqkis/4GV/8T6Yu/8=
+----- Device UUID: 55c9ae6 -----
+[id: 004] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 018] NODE_PUBLIC_KEY=jHMjM58W6sAmaGAYUEZW03tINN1heTuXnlqnEW79ep4=
+[id: 558] NODE_ADDRESS=0.0.0.0
+[id: 580] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 008] OWNER_ACCOUNT_ADDRESS=BCZKLvgUYZ1KKx-jtF9KoJskjVPvB9jpIjfzzI6zDW0J
+[id: 014] NODE_SEED=street roast immovable escalator stinger nervy provider debug flavoring hubcap creature remix
+[id: 006] SMITHING=true
+----- Device UUID: 3472130 -----
+[id: 009] OWNER_ACCOUNT_ADDRESS=OnEYzI-EMV6UTfoUEzpQUjkSlnqB82-SyRN7469lJTWH
+[id: 016] SMITHING=true
+[id: 011] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 012] NODE_SEED=spree uplifted stapling quotable disfigure lair deduct untying timothy maggot cryptic unrigged
+[id: 567] NODE_ADDRESS=0.0.0.0
+[id: 561] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 022] NODE_PUBLIC_KEY=Keu41kYXmVloKfr4MwdFWeq1ZKMtRZhGNMmTRgbyNNw=
+----- Device UUID: cce2597 -----
+[id: 571] NODE_ADDRESS=0.0.0.0
+[id: 025] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 576] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 023] NODE_PUBLIC_KEY=WyTkRmVeuva6BE6OraK7rcpR81yNeJTcKaDQXq6mPs8=
+[id: 020] SMITHING=true
+[id: 021] OWNER_ACCOUNT_ADDRESS=iSJt3H8wFOzlWKsy_UoEWF_OjF6oymHMqthyUMDKSyxb
+[id: 013] NODE_SEED=merge plug donor drop cancel inherit extra toss cabbage awkward destroy rail
+----- Device UUID: 1458d84 -----
+[id: 010] NODE_PUBLIC_KEY=eBhouw5/ZVq73apo2kcRO9AEUa681cgPTuXhBwZN+/I=
+[id: 015] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 024] OWNER_ACCOUNT_ADDRESS=Zqnn7dDK-GOikw23Yu2M_x1WXg0mF-oKg2GCVp8ui8-d
+[id: 017] NODE_SEED=helmet eagle wire observe busy find kidney car ignore insect feature mother
+[id: 577] WELL_KNOWN_PEERS=["192.168.21.254:8001"]
+[id: 575] NODE_ADDRESS=0.0.0.0
+[id: 019] SMITHING=true
+----- Device UUID: b14cce4 -----
+[id: 879] SMITHING=true
+[id: 716] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id: 878] OWNER_ACCOUNT_ADDRESS=bPeVP71yktQ-z3LdmcbSCgo4hniS1Ce2vnfUWJYUz10d
+[id: 877] NODE_SEED=sponsor swallow family merry economy picnic life tilt large faith loop space
+[id: 860] NODE_ADDRESS=0.0.0.0
+[id: 863] NODE_PUBLIC_KEY=zyPuBPsyZcC6McEEkyYqP6fo6Tk4Z8uzgtkYqFxgWY0=
+----- Device UUID: 190a080 -----
+[id: 873] WELLKNOWN_PEERS=["192.168.21.254:8001"]
+[id:

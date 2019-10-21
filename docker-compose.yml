@@ -3,7 +3,7 @@ volumes:
   resin-data:
 services:
   shell:
-    build: ./alpine-openssh
+    build: ./opensshd
     network_mode: "host"
     volumes:
       - "resin-data:/data"

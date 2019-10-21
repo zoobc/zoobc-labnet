@@ -28,3 +28,11 @@ services:
     network_mode: "host"
     depends_on:
       - main
+  sqliteweb:
+    build: ./sqlite-web
+    network_mode: "host"
+    volumes:
+      - "resin-data:/data"
+    environment:
+      - SQLITE_DATABASE=/data/zoobc-core/main/zoobc.db
+      - SQLITE_WEB_PASSWORD=login123

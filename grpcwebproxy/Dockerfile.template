@@ -1,13 +1,13 @@
 # Tested with: balena build --deviceType raspberrypi3 --arch armv7hf --logs
 
 FROM balenalib/%%RESIN_MACHINE_NAME%%-alpine-golang:1.12-build as builder
-RUN [ "cross-build-start" ]
+#RUN [ "cross-build-start" ]
 RUN go get -u -v github.com/golang/dep/cmd/dep
 RUN go get -u -d -v github.com/improbable-eng/grpc-web/go/grpcwebproxy
 WORKDIR /go/src/github.com/improbable-eng/grpc-web/go/grpcwebproxy
 RUN /go/bin/dep ensure -v
 RUN CGO_ENABLED=0 go install -v -tags='netgo' -ldflags='-s -w'
-RUN [ "cross-build-end" ]
+#RUN [ "cross-build-end" ]
 
 
 ### Static build requires no runtime:

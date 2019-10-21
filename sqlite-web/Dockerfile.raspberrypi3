@@ -1,0 +1,16 @@
+FROM balenalib/%%RESIN_MACHINE_NAME%%-alpine-python:3-build as builder
+RUN [ "cross-build-start" ]
+RUN pip3 install --no-cache-dir Cython --install-option="--no-cython-compile" \
+  && python3 -m venv --system-site-packages /opt/venv
+ENV PATH="/opt/venv/bin:$PATH" VIRTUAL_ENV="/opt/venv"
+RUN install_packages sqlite-dev \
+  && pip install --no-cache-dir -v peewee \
+  && pip install --no-cache-dir flask sqlite-web \
+  && pip uninstall -y setuptools pip
+RUN [ "cross-build-end" ]
+
+FROM balenalib/%%RESIN_MACHINE_NAME%%-alpine-python:3-run
+COPY --from=builder /opt/venv/ /opt/venv
+ENV PATH="/opt/venv/bin:$PATH" VIRTUAL_ENV="/opt/venv"
+WORKDIR /data
+CMD sqlite_web -x -H 0.0.0.0 -p 8080 -r $SQLITE_DATABASE

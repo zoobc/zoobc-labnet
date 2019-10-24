@@ -1,4 +1,0 @@
-[submodule "zoobc-core"]
-	path = zoobc-core
-	url = git@github.com:zoobc/zoobc-core.git
-	branch = 327-raspi-build-deploy

@@ -17,6 +17,7 @@ services:
     labels:
       io.balena.features.supervisor-api: "1"
   n2:
+    # image: busybox:musl
     build: ./zoobc-core
     network_mode: "host"
     volumes:

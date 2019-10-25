@@ -44,10 +44,12 @@ rsync -av --delete zoobc-core/resource/ root@0ab8085.local:/docker/volumes/2_res
 ```
 
 ## Install Balena CLI
-Note: Balena CLI is only required for device bootstrapping, and checking logs remotely.
+Note: Balena CLI is only required for device bootstrapping, rebuild and deploy.
 
-- Windows or Mac: https://github.com/balena-io/balena-cli/blob/master/INSTALL.md
-- Linux: Build using the commands below
+- Windows or Mac: Run installer from https://github.com/balena-io/balena-cli/blob/master/INSTALL.md
+- Linux: Extract Standalone-Zip from https://github.com/balena-io/balena-cli/blob/master/INSTALL.md to `/opt/balena-cli
+- Other OS: Build using the commands below
+
 ```sh
 sudo apt install g++ make git
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
@@ -61,8 +63,9 @@ Configure balena-cli to point towards the local openBalena instance (instead of 
 
 ```sh
 wget -O ~/balena-ca.crt https://raw.githubusercontent.com/zoobc/zoobc-labnet/master/balena-ca.crt
-echo -e '\nexport NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bashrc
-echo 'balenaUrl: "raspi.zoobc.org"' > ~/.balenarc.yml
+echo -e '\nexport BALENARC_BALENA_URL="raspi.zoobc.org"' >> ~/.bashrc
+echo -e 'export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bashrc
+#echo 'balenaUrl: "raspi.zoobc.org"' > ~/.balenarc.yml
 ```
 
 ### Configuring Private Docker registry
@@ -72,21 +75,30 @@ Allows docker to connect to the local docker registry (instead of dockerhub).
 ```sh
 sudo mkdir -p /etc/docker/certs.d/registry.raspi.zoobc.org
 sudo cp ~/balena-ca.crt /etc/docker/certs.d/registry.raspi.zoobc.org/ca.crt
-#sudo cp ~/balena-ca.crt /usr/local/share/ca-certificates/ca.crt
-#sudo update-ca-certificates
+#sudo cp ~/balena-ca.crt /usr/local/share/ca-certificates/ca.crt && sudo update-ca-certificates
 sudo systemctl restart docker
 docker version
 ```
 
 ### List Devices via Balena CLI ###
 ```sh
+export BALENARC_BALENA_URL="raspi.zoobc.org"
 export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"
 balena login # Choose Credentials (raspi@blockchainzoo.com:login123)
 balena devices
 balena devices | tail -n +2 | awk '{ print $2 ".local" }'
 ```
 
-## Build & Deploy
+## Build & Deploy on Remote Docker Daemon
+
+```sh
+git clone https://github.com/zoobc/zoobc-labnet.git
+cd zoobc-labnet
+./deploy.sh
+```
+
+## Build & Deploy on Local Workstation
+
 ```sh
 git submodule update --init --remote
 balena apps
@@ -101,4 +113,3 @@ balena build --deviceType raspberrypi3 --arch armv7hf --logs
 balena build --deviceType intel-nuc --arch amd64 --logs
 # More architectures here: https://www.balena.io/docs/reference/base-images/devicetypes/
 ```
-

@@ -4,7 +4,7 @@
 mDNS is used for discovering devices on the local network by their hostname. Please ensure it is working on your machine.
 
 - MacOS: dns-sd is preinstalled
-- Ubuntu: avahi-daemon is preinstalled
+- Linux: Ensure avahi-daemon & libnss-mdns is preinstalled
 - Windows 10: mDNS is supported out of the box
 - Older Windows versions: Download and install https://support.apple.com/kb/DL999
 
@@ -17,7 +17,8 @@ dns-sd -G v4v6 ae1c71f.local
 
 Linux:
 ```sh
-avahi-browse --resolve _ssh._tcp
+sudo apt install libnss-mdns
+avahi-browse _ssh._tcp
 avahi-resolve-host-name ae1c71f.local
 ```
 
@@ -36,11 +37,23 @@ restart n2 # Restart n2 node
 restart n2 # Restart n3 node
 ```
 
-## Sync data to device
+## Sync configuration to device
 ```sh
+# Single device
 export RSYNC_RSH='ssh -p 22222'
-rsync -av zoobc-core/resource/ root@0ab8085.local:/docker/volumes/2_resin-data/_data/zoobc-core/
-rsync -av --delete zoobc-core/resource/ root@0ab8085.local:/docker/volumes/2_resin-data/_data/zoobc-core/
+rsync -av zoobc-core/resource_cluster/ root@0ab8085.local:/docker/volumes/2_resin-data/_data/zoobc-core/
+#rsync -av --delete zoobc-core/resource_cluster/ root@0ab8085.local:/docker/volumes/2_resin-data/_data/zoobc-core/
+
+# All devices
+export RSYNC_RSH='ssh -p 22 -o StrictHostKeyChecking=no'
+balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} rsync -av resource_cluster/ root@{}.local:/data/zoobc-core/
+#balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} rsync -av --delete resource_cluster/ root@{}.local:/data/zoobc-core/
+```
+
+## Reset & Restart nodes
+```sh
+balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} ssh -o StrictHostKeyChecking=no root@{}.local "source .profile && rm -rf /data/zoobc-core/main && cat /data/zoobc-core/config_main.toml && restart main"
+balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} ssh -o StrictHostKeyChecking=no root@{}.local "source .profile && rm -rf /data/zoobc-core/n2 && cat /data/zoobc-core/config_n2.toml && restart n2"
 ```
 
 ## Install Balena CLI
@@ -63,8 +76,8 @@ Configure balena-cli to point towards the local openBalena instance (instead of 
 
 ```sh
 wget -O ~/balena-ca.crt https://raw.githubusercontent.com/zoobc/zoobc-labnet/master/balena-ca.crt
-echo -e '\nexport BALENARC_BALENA_URL="raspi.zoobc.org"' >> ~/.bashrc
-echo -e 'export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bashrc
+echo -e '\nexport BALENARC_BALENA_URL="raspi.zoobc.org"' >> ~/.bash_profile
+echo -e 'export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"' >> ~/.bash_profile
 #echo 'balenaUrl: "raspi.zoobc.org"' > ~/.balenarc.yml
 ```
 
@@ -80,7 +93,7 @@ sudo systemctl restart docker
 docker version
 ```
 
-### List Devices via Balena CLI ###
+### List Devices via Balena CLI
 ```sh
 export BALENARC_BALENA_URL="raspi.zoobc.org"
 export NODE_EXTRA_CA_CERTS="$HOME/balena-ca.crt"
@@ -89,7 +102,9 @@ balena devices
 balena devices | tail -n +2 | awk '{ print $2 ".local" }'
 ```
 
-## Build & Deploy on Remote Docker Daemon
+## Build & Deploy
+
+### Build & Deploy on Remote Docker Daemon
 
 ```sh
 git clone https://github.com/zoobc/zoobc-labnet.git
@@ -97,15 +112,16 @@ cd zoobc-labnet
 ./deploy.sh
 ```
 
-## Build & Deploy on Local Workstation
+### Build & Deploy on Local Workstation
 
 ```sh
+git pull
 git submodule update --init --remote
 balena apps
 balena deploy zbcDev --build --logs
 ```
 
-### Build without Deploying
+### Build locally without Deploying
 ```sh
 # Build without deploy (for raspberrypi3)
 balena build --deviceType raspberrypi3 --arch armv7hf --logs

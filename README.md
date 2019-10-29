@@ -30,11 +30,12 @@ nslookup ae1c71f.local
 ```sh
 ssh root@0ab8085.local
 ls /data/zoobc-core
-stop main # Start main node
-start main # Stop main node
-restart main # Restart main node
-restart n2 # Restart n2 node
-restart n2 # Restart n3 node
+stop main # Stop main node
+start main # Start main node
+stop n2 # Stop n2 node
+start n2 # Start n2 node
+stop n3 # Stop n3 node
+start n3 # Start n3 node
 ```
 
 ## Sync configuration to device
@@ -52,8 +53,8 @@ balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} rsync -av resource_c
 
 ## Reset & Restart nodes
 ```sh
-balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} ssh -o StrictHostKeyChecking=no root@{}.local "source .profile && rm -rf /data/zoobc-core/main && cat /data/zoobc-core/config_main.toml && restart main"
-balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} ssh -o StrictHostKeyChecking=no root@{}.local "source .profile && rm -rf /data/zoobc-core/n2 && cat /data/zoobc-core/config_n2.toml && restart n2"
+balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} ssh -o StrictHostKeyChecking=no root@{}.local "source .profile && stop main && rm -rf /data/zoobc-core/main && cat /data/zoobc-core/config_main.toml && start main"
+balena devices | awk '{print $2}' | tail -n +2 | xargs -I{} ssh -o StrictHostKeyChecking=no root@{}.local "source .profile && stop n2 && rm -rf /data/zoobc-core/n2 && cat /data/zoobc-core/config_n2.toml && start n2"
 ```
 
 ## Install Balena CLI

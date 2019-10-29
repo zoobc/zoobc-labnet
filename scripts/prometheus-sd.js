@@ -57,7 +57,7 @@ Promise.all([
                     device_os_version: device.os_version,
                     device_os_variant: device.os_variant,
                     device_supervisor_version: device.supervisor_version,
-                    device_is_online: device.is_online,
+                    device_is_online: device.is_online ? 'true' : 'false',
                     device_status: device.status,
                 };
                 const targets = [];

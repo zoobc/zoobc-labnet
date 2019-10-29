@@ -61,9 +61,9 @@ Promise.all([
                     device_status: device.status,
                 };
                 const targets = [];
-                if (device.public_address) targets.push(`${device.public_address}:${monitoringPort}`);
                 if (device.ip_address) targets.push(`${device.ip_address}:${monitoringPort}`);
-                if (device.vpn_address) targets.push(`${device.vpn_address}:${monitoringPort}`);
+                if (device.public_address) targets.push(`${device.public_address}:${monitoringPort}`);
+                // if (device.vpn_address) targets.push(`${device.vpn_address}:${monitoringPort}`);
                 return { labels, targets };
             }
         }).filter(val => !!val);

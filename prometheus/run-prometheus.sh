@@ -1,4 +1,6 @@
 #!/bin/sh
+cd "$(dirname "$0")"
+
 docker volume create prometheus-data || true
 sudo chmod 777 /var/lib/docker/volumes/prometheus-data/_data
 sudo cp -u ./targets.json /var/lib/docker/volumes/prometheus-data/_data/

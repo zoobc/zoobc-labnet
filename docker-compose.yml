@@ -11,6 +11,7 @@ services:
       io.balena.features.supervisor-api: "1"
   main:
     build: ./zoobc-core
+    command: ['--env-override', '--debug']
     network_mode: "host"
     volumes:
       - "resin-data:/data"
@@ -19,6 +20,7 @@ services:
   n2:
     # image: busybox:musl
     build: ./zoobc-core
+    command: ['--env-override', '--debug']
     network_mode: "host"
     volumes:
       - "resin-data:/data"
